@@ -1,4 +1,13 @@
 .home {
+  header {
+    border-bottom: 2px dashed @silver;
+    h2 {
+      padding-top: 15px
+    }
+    p {
+      padding-bottom: 15px;
+    }
+  }
 
   .content-section {
     margin: 30px 0;
@@ -52,10 +61,21 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @mobile {
+      flex-flow: column;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile {
+        text-align: center;
+        width: 100%;
+      }
+      .btn {
+        .button(2rem);
+      }
     }
+
   }
 }// home
